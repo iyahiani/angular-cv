@@ -10,6 +10,7 @@ import { SectionComponent } from './cv-content/section/section.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LifePeriodComponent } from './cv-content/life-period/life-period.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactDetailsComponent,
     SectionComponent,
     LifePeriodComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
