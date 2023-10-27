@@ -12,6 +12,7 @@ import { LifePeriodComponent } from './cv-content/life-period/life-period.compon
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     SectionComponent,
     LifePeriodComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,
