@@ -13,9 +13,19 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CreateUserComponent } from './create-user/create-user.component';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    ReactiveFormsModule,
+    CommonModule,
+    HttpClientModule
+  ],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -25,13 +35,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     LifePeriodComponent,
     FooterComponent,
     LoginComponent,
-    CreateUserComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FontAwesomeModule,
-    ReactiveFormsModule
+    CreateUserComponent,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

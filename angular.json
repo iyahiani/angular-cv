@@ -99,10 +99,9 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+            "lintFilePatterns": [
+              "src/**/html",
+              "src/**/ts"
             ],
             "exclude": [
               "**/node_modules/**"
