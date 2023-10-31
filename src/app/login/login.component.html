@@ -1,8 +1,8 @@
 <div class="login-page">
-  <div class="form" [formGroup]="loginForm" (ngSubmit)="onFormSubmit()">
+  <div class="form" [formGroup]="loginForm" (ngSubmit)="getUser()">
     <div class="login-form">
-      <input type="text" placeholder="username" formControlName="login"  placeholder="Enter Name"/>
-      <input type="password" placeholder="password" formControlName="password"  placeholder="Enter password"/>
+      <input type="text" placeholder="login" formControlName="login"  />
+      <input type="password" placeholder="password" formControlName="password" />
       <button>login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </div>

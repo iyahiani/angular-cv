@@ -3,6 +3,7 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {AuthentService} from '../services/authent.service';
 import {User} from '../model/user';
 import {environment} from '../../environments/environment';
+import {map} from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -20,10 +21,10 @@ export class LoginComponent {
     password: new FormControl()
   });
   // tslint:disable-next-line:typedef
-  onFormSubmit() {
+  getUser() {
     this.user.login = this.loginForm.get('login')?.value;
     this.user.password = this.loginForm.get('password')?.value;
-    this.authentService.authent(this.url, this.user).subscribe(data  => {
+    this.authentService.login(this.url, this.user).subscribe(data  => {
       console.log(data);
     });
   }

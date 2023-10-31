@@ -5,7 +5,7 @@ import {CreateUserComponent} from './create-user/create-user.component';
 
 const routes: Routes = [
   { path: '/login', component: LoginComponent },
-  { path: '**', component: CreateUserComponent }
+  { path: '/', component: CreateUserComponent }
 ];
 
 @NgModule({

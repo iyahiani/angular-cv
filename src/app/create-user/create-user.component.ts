@@ -10,9 +10,9 @@ import {AuthentService} from '../services/authent.service';
   styleUrls: ['./create-user.component.css']
 })
 export class CreateUserComponent {
-  user: User = {login: '', email: '', password: '', roles: ''};
   url = environment.api;
-  constructor(private authentService: AuthentService) {
+  private user: any = {};
+  constructor(private authenticService: AuthentService) {
   }
   loginFormCreate = new FormGroup({
     login: new FormControl(),
@@ -27,7 +27,7 @@ export class CreateUserComponent {
     this.user.password = this.loginFormCreate.get('password')?.value;
     this.user.email = this.loginFormCreate.get('email')?.value;
     this.user.roles = this.loginFormCreate.get('role')?.value;
-    this.authentService.authent(this.url, this.user).subscribe(data  => {
+    this.authenticService.createUser(this.url, this.user).subscribe(data  => {
       console.log(data);
     });
   }

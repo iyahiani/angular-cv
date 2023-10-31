@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Observable} from 'rxjs';
 import {User} from '../model/user';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import {HttpClient, HttpParams} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,12 @@ export class AuthentService {
     'Origin, X-Requested-With, Content-Type, Accept, Authorization');
     this.httpOption.append('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
   }
-  public authent(api: string , user: User): Observable<any>{
+  public createUser(api: string , user: User): Observable<any>{
     return this.http.post(api, user);
   }
-
+  // tslint:disable-next-line:typedef
+  public  login(api: string, user: User){
+    // @ts-ignore
+    return this.http.get(api, this.httpOption, user);
+  }
 }
