@@ -15,6 +15,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { CreateUserComponent } from './create-user/create-user.component';
 import {CommonModule} from '@angular/common';
 import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home/home.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {HttpClientModule} from '@angular/common/http';
     FooterComponent,
     LoginComponent,
     CreateUserComponent,
+    HomeComponent,
 
   ],
   providers: [],
