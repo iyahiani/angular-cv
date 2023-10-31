@@ -22,7 +22,7 @@ export class AuthentService {
   public createUser(api: string, user: User): Observable<any> {
     return this.http.post(api, user);
   }
-  public login(api: string, user: User) {
+  public login(api: string, user: User): Observable<User> {
     // @ts-ignore
     return this.http.get(api, this.httpOption, user);
   }
