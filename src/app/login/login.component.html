@@ -1,7 +1,13 @@
 <div class="login-page">
   <div class="form" [formGroup]="loginForm" >
     <div class="login-form">
-      <input type="text" placeholder="login" formControlName="login"  />
+      <div class="form-group">
+        <label for="email" class="col-sm-2">Email</label>
+        <div class="col-sm-10">
+          <input type="text" placeholder="email" formControlName="email" id="email" />
+        </div>
+      </div>
+
       <input type="password" placeholder="password" formControlName="password" />
       <button (click)="getUser()">login</button>
       <p class="message">Not registered? <a href="#">Create an account</a></p>

@@ -4,29 +4,26 @@ import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-contact-details',
   templateUrl: './contact-details.component.html',
-  styleUrls: ['./contact-details.component.css']
+  styleUrls: ['./contact-details.component.css'],
 })
 export class ContactDetailsComponent implements OnInit {
+  phone_number = '+661498344';
 
-  phone_number = "+353 87 9608090"
+  email = 'yahisma';
+  domain = 'gmail.com';
 
-  email = "hartepaul"
-  domain = "gmail.com"
-
-  github = "github.com/paulharte"
-  my_website = "paulspetprojects.net"
+  github = 'github.com/iyahiani';
+  my_website = 'ismaely.com';
   show_private_details = false;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
-
-    this.show_private_details =  environment.show_private_details
+    this.show_private_details = environment.show_private_details;
   }
 
   formEmail(): string {
     // This is purely to confuse spambots on github :)
-    return this.email + '@' + this.domain
+    return this.email + '@' + this.domain;
   }
-
 }

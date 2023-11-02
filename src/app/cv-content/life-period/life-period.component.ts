@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LifePeriodComponent implements OnInit {
 
-  @Input() dateText:string = "";
-  @Input() place: string = "";
-  @Input() position: string = "";
+  @Input() dateText = '';
+  @Input() place = '';
+  @Input() position = '';
 
   constructor() { }
 

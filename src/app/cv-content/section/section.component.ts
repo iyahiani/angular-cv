@@ -9,7 +9,7 @@ import { faInfo } from '@fortawesome/free-solid-svg-icons';
 })
 export class SectionComponent implements OnInit {
 
-  @Input() title = "";
+  @Input() title = '';
   @Input() icon: IconProp = faInfo;
 
   constructor() { }
